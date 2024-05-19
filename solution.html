@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hewlett Packard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arima:wght@100;200&family=Barlow+Condensed:wght@200;300&family=Barlow:wght@300&family=Bellefair&family=Figtree:wght@300;400;500;600&family=Heebo&family=Kaushan+Script&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;1,6..12,200&family=Open+Sans:wght@300;400&family=Raleway:ital,wght@0,100;0,300;1,100;1,200;1,300&family=Roboto:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Figtree', sans-serif;
+}
+:root{
+    --btn-color:#009970;
+}
+.navcontainer{
+    padding: 5px 80px;
+    background-color: black;
+    color: white;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+.navcontainer nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .logo img{
+    width: 40px;
+}
+nav .logo h3{
+    font-size: 20px;
+}
+nav .logo h4{
+    font-size: 17px;
+    font-weight: 100;
+}
+nav .navlinks ul{
+    display: flex;
+    list-style-type: none;
+}
+nav .navlinks ul li{
+   padding-left: 40px;
+}
+nav .navlinks ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+nav .icon{
+    display: flex;
+    gap: 20px;
+}
+nav .icon i{
+    font-size: 17px;
+}
+.checkbtn{ 
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media only screen and (max-width:500px) and (min-width:100px){
+    .navcontainer{
+        padding: 10px 20px;
+    }
+    nav .logo h3{
+        font-size: 17px;
+    }
+    nav .logo h4{
+        font-size: 15px;
+        font-weight: 100;
+    }
+    nav .navlinks ul{
+        width: 50%;
+        flex-direction: column;
+        position: absolute;
+        background-color: black;
+        margin-top: 28px;
+        right: 0;
+        transition: 0.5s ease-in-out;
+        display: none;
+    }
+    nav .navlinks ul li{
+       padding: 30px 20px;
+    }
+    nav .navlinks ul li a{
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+    }
+    nav .icon{
+        display: flex;
+        position: absolute;
+        right: 55px;
+        gap: 15px;
+    }
+    .checkbtn{
+    display: block;
+    color: black;
+    margin-top: 10px;
+    border: 2px solid white;
+    margin-bottom: 13px;
+    border-radius: 6px;
+    position: absolute;
+    right: 10px;
+   }
+   label i{
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    padding: 5px;
+   }
+   .home{
+    color: black;
+  }
+  #check:checked~ .navlinks ul{
+    display: block;
+  }
+
+}
+.h-container{
+    margin-top: 134px;
+}
+.h-container .h-components .top{
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgb(209, 206, 206);
+}
+.h-components .top h2{
+    font-size: 35px;
+    font-weight: 400;
+}
+.h-components .top h3{
+    font-size: 20px;
+    margin: 25px 0;
+    font-weight: 300;
+}
+.h-components .bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.h-components .bottom .b-top h3{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+.h-components .bottom .b-botom{
+    display: flex;
+    gap: 100px;
+}
+.bottom .b-botom label{
+    font-weight: 900;
+    font-size: 17px;
+}
+.h-container #next{
+    position: absolute;
+    right: 200px;
+    margin-top: 80px;
+}
+.h-container #next h3 a{
+    text-decoration: none;
+    font-size: 18px;
+    background-color: #009970;
+    color: white;
+    padding: 7px 50px;
+}
+.h-container #back{
+    position: absolute;
+    left: 250px;
+    margin-top: 80px;
+}
+.h-container #back a i{
+    text-decoration: none;
+    font-size: 18px;
+    background-color: #009970;
+    color: white;
+    padding: 5px 7px;
+}
+@media only screen and (max-width:500px) and (min-width:100px){
+    .h-components .top h2{
+        font-size: 22px;
+    }
+    .h-components .top h3{
+        font-size: 20px;
+    }
+    .h-components .bottom .b-top h3{
+        font-size: 16px;
+    }
+    .h-components .bottom .b-botom{
+        gap: 50px;
+    }
+    .h-container #next{
+        right: 20px;
+    }
+    .h-container #next h3 a{
+        font-size: 15px;
+        padding: 5px 30px;
+    }
+    .h-container #back{
+        left: 20px;
+    }
+    .h-container #left a i{
+        font-size: 15px;
+        padding: 5px 30px;
+    }
+}
+footer{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 130px;
+    padding: 20px 0;
+    background-color: black;
+    color: white;
+}
+footer h4{
+    font-size: 16px;
+}
+footer h5{
+    font-size: 15px;
+    font-weight: 200;
+    padding-top: 10px;
+}
+footer .follow .icon{
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+footer .follow .icon i{
+    padding: 4px;
+    background-color: #009970;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+@media only screen and (max-width:500px) and (min-width:100px){
+    footer{
+        display: flex;
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 30px;
+    }
+    footer .follow .icon{
+        gap: 15px;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navcontainer">
+            <nav>
+                <div class="logo">
+                    <img src="image/kisspng-hewlett-packard-hewlett-packard-enterprise-logo-pr-croc-global-5b8fd581dca441.5776499815361529619038.png" alt="">
+                    <h3>Hewlett Packard</h3>
+                    <h4>Enterprise</h4>
+                </div>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <div class="navlinks">
+                    <ul>
+                        <li><a href="#">HPE GreenLake</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-dice-four"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="h-container">
+            <div class="h-components">
+                <div class="top">
+                    <h2>AZURE HCI Sizing Tool</h2>
+                    <h3>SOLUTION PREFERENCE</h3>  
+                </div>
+                <div class="bottom">
+                    <div class="b-top">
+                        <h3>Choose any of the given Option,So that we will Provide the Best Solution</h3>
+                    </div>
+                    <div class="b-botom">
+                        <div>
+                            <input type="checkbox" id="intel">
+                            <label for="intel">Integrated System</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="amid">
+                            <label for="amid">Validated Node</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="back">
+                <a href="table.html"><i class="fa-solid fa-left-long"></i></a>
+            </div>
+            <div id="next">
+                <h3><a href="tool.html">NEXT</a></h3>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="company">
+            <h4>COMPANY</h4>
+            <h5>About HPE</h5>
+            <h5>Accessibility</h5>
+            <h5>Careers</h5>
+            <h5>Contact US</h5>
+            <h5>Corparate Responsibilty</h5>
+            <h5>Global</h5>
+        </div>
+        <div class="learn">
+            <h4>LEARN ABOUT</h4>
+            <h5>Artificial Intelligence</h5>
+            <h5>Cloud Computing</h5>
+            <h5>Containers</h5>
+            <h5>Machine Learning</h5>
+        </div>
+        <div class="support">
+            <h4>SUPPORT</h4>
+            <h5>Product Support</h5>
+            <h5>Software & Drivers</h5>
+            <h5>Waranty Check</h5>
+            <h5>Enhanced Check Support</h5>
+        </div>
+        <div class="customer">
+            <h4>CUSTOMER RESOURCES</h4>
+            <h5>Customer  Stores</h5>
+            <h5>How to Buy</h5>
+            <h5>Customer  Stores</h5>
+            <h5>Financial Services</h5>
+            <h5>Email Sign up</h5>
+        </div>
+        <div class="follow">
+            <h4>FOLLOW HPE</h4>
+            <div class="icon">
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-solid fa-wifi"></i>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
